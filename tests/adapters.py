@@ -4,6 +4,7 @@ import os
 from typing import Any
 from cs336_data.extract_text import extract_text_from_html_bytes
 from cs336_data.language_identification import identify_language
+from cs336_data.mask_pii import mask_emails, mask_phone, mask_ip
 
 
 
@@ -16,15 +17,15 @@ def run_identify_language(text: str) -> tuple[Any, float]:
 
 
 def run_mask_emails(text: str) -> tuple[str, int]:
-    raise NotImplementedError
+    return mask_emails(text)
 
 
 def run_mask_phone_numbers(text: str) -> tuple[str, int]:
-    raise NotImplementedError
+    return mask_phone(text)
 
 
 def run_mask_ips(text: str) -> tuple[str, int]:
-    raise NotImplementedError
+    return mask_ip(text)
 
 
 def run_classify_nsfw(text: str) -> tuple[Any, float]:
