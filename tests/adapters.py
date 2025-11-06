@@ -5,6 +5,8 @@ from typing import Any
 from cs336_data.extract_text import extract_text_from_html_bytes
 from cs336_data.language_identification import identify_language
 from cs336_data.mask_pii import mask_emails, mask_phone, mask_ip
+from cs336_data.harmful_content import identify_nsfw, identify_toxic_speech
+from cs336_data.gopher_quality_filters import gopher_quality_filter
 
 
 
@@ -29,11 +31,11 @@ def run_mask_ips(text: str) -> tuple[str, int]:
 
 
 def run_classify_nsfw(text: str) -> tuple[Any, float]:
-    raise NotImplementedError
+   return identify_nsfw(text)
 
 
 def run_classify_toxic_speech(text: str) -> tuple[Any, float]:
-    raise NotImplementedError
+   return identify_toxic_speech(text)
 
 
 def run_classify_quality(text: str) -> tuple[Any, float]:
@@ -41,7 +43,7 @@ def run_classify_quality(text: str) -> tuple[Any, float]:
 
 
 def run_gopher_quality_filter(text: str) -> bool:
-    raise NotImplementedError
+    return gopher_quality_filter(text)
 
 
 def run_exact_line_deduplication(

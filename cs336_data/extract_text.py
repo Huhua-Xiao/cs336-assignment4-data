@@ -17,7 +17,7 @@ if __name__ == "__main__":
     import gzip
     from fastwarc.warc import ArchiveIterator, WarcRecordType
 
-    warc_path = "/mnt/c/Users/Xiao/Desktop/cs336/assignment4-data/data/CC/example.warc.gz"
+    warc_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/CC/example.warc.gz"
     count = 0
     with gzip.open(warc_path, 'rb') as f:
         for record in ArchiveIterator(f):

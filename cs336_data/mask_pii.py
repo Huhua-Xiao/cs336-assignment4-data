@@ -17,6 +17,7 @@ PHONE_RE = re.compile(
     (?!\d)                               
    '''
 )
+
 OCTET = r'(?:25[0-5]|2[0-4]\d|1?\d?\d)'
 IPV4_RE = re.compile(rf'\b{OCTET}\.{OCTET}\.{OCTET}\.{OCTET}\b')
 
