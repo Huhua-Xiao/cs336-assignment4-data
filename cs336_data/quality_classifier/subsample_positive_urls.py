@@ -4,7 +4,7 @@ import random
 input_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/wiki/enwiki-20240420-extracted_urls.txt"
 output_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/wiki/subsampled_positive_urls.txt"
 
-def generate_sample_positive_quality_test(max_urls: int = 100000):
+def generate_sample_positive_quality_test(max_urls: int = 1000000):
     random.seed(42) # for reproducibility
 
     # if the file size is less than 200MB, read all lines into memory

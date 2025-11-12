@@ -11,7 +11,7 @@ import gzip
 from fastwarc.warc import ArchiveIterator, WarcRecordType
 
 input_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/wiki/subsampled_positive_urls.warc.gz"
-output_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/wiki/subsampled_positive_urls.txt"
+output_path = "/Users/huhuaxiao/Documents/GitHub/cs336-assignment4-data/data/wiki/subsampled_positive_samples.txt"
 
 
 def clean_text_basic(text: str): 
